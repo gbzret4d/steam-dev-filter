@@ -1,0 +1,73 @@
+name: Validate Database
+
+on:
+  pull_request:
+    paths:
+      - "database.json"
+  push:
+    branches:
+      - main
+    paths:
+      - "database.json"
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.x"
+
+      - name: Validate JSON Structure and Fields
+        run: |
+          python -c "
+          import json
+          import sys
+
+          REQUIRED_FIELDS = ['name', 'aliases', 'type', 'proof_url', 'severity', 'notes']
+          VALID_TYPES = ['RUG_PULL', 'ASSET_FLIP', 'MALICIOUS', 'ABANDONWARE', 'HOSTILE_DEV', 'BROKEN_PROMISES']
+          VALID_SEVERITIES = ['critical', 'warning', 'info']
+
+          try:
+              with open('database.json', 'r', encoding='utf-8') as f:
+                  data = json.load(f)
+          except json.JSONDecodeError as e:
+              print(f'::error::Invalid JSON Syntax: {e}')
+              sys.exit(1)
+
+          if not isinstance(data, dict):
+              print('::error::Root element must be a Dictionary (Key-Value pairs).')
+              sys.exit(1)
+
+          failed = False
+          for steam_id, entry in data.items():
+              # Check required fields
+              for field in REQUIRED_FIELDS:
+                  if field not in entry:
+                      print(f'::error file=database.json::ID {steam_id}: Missing field {field}')
+                      failed = True
+              
+              # Check ENUMs
+              if 'type' in entry and entry['type'] not in VALID_TYPES:
+                  print(f'::error file=database.json::ID {steam_id}: Invalid type \'{entry['type']}\'. Allowed: {VALID_TYPES}')
+                  failed = True
+              
+              if 'severity' in entry and entry['severity'] not in VALID_SEVERITIES:
+                  print(f'::error file=database.json::ID {steam_id}: Invalid severity \'{entry['severity']}\'. Allowed: {VALID_SEVERITIES}')
+                  failed = True
+
+              # Check URL format (basic)
+              if 'proof_url' in entry:
+                  url = entry['proof_url']
+                  if not url.startswith('http'):
+                       print(f'::error file=database.json::ID {steam_id}: proof_url must start with http/https.')
+                       failed = True
+
+          if failed:
+              sys.exit(1)
+          print('Validation passed successfully.')
+          "

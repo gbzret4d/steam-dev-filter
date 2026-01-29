@@ -1,0 +1,61 @@
+name: Report Scammer
+description: Report a fraudulent Steam developer or publisher
+title: "[REPORT] <Developer Name>"
+labels: ["scam-report", "needs-review"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for helping verify the Steam ecosystem!
+        **IMPORTANT:** Reports without valid proof will be rejected.
+
+  - type: input
+    id: dev_name
+    attributes:
+      label: Developer/Publisher Name
+      description: The current name as shown on Steam.
+      placeholder: "e.g. Bad Dev Studio"
+    validations:
+      required: true
+
+  - type: input
+    id: steam_id
+    attributes:
+      label: Steam Developer/Publisher ID
+      description: The numeric ID or unique string ID from the Steam store URL.
+      placeholder: "e.g. 12345678 or developer-slug"
+    validations:
+      required: true
+
+  - type: dropdown
+    id: category
+    attributes:
+      label: Category
+      description: What kind of fraud/issue is this?
+      options:
+        - RUG_PULL (Money taken, development stopped)
+        - ASSET_FLIP (Cheap assets, no effort)
+        - MALICIOUS (Malware, Crypto-miner, Valve Ban)
+        - ABANDONWARE (>1 year no update despite Early Access)
+        - HOSTILE_DEV (Legal threats, insults)
+        - BROKEN_PROMISES (Features promised but never delivered)
+    validations:
+      required: true
+
+  - type: input
+    id: proof
+    attributes:
+      label: Proof URL
+      description: Link to screenshot, archive, or video evidence.
+      placeholder: "https://archive.is/..."
+    validations:
+      required: true
+      
+  - type: textarea
+    id: description
+    attributes:
+      label: Description / Context
+      description: Briefly explain what happened.
+      placeholder: "They deleted their discord after selling 10k copies..."
+    validations:
+      required: true

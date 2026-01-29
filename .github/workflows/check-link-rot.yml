@@ -1,0 +1,85 @@
+name: Check Link Rot
+
+on:
+  schedule:
+    - cron: "0 0 * * 1" # Every Monday at 00:00
+  workflow_dispatch:
+
+permissions:
+  issues: write
+
+jobs:
+  check-links:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.x"
+
+      - name: Install Request Library
+        run: pip install requests
+
+      - name: Check URLs and Create Issues
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          REPO: ${{ github.repository }}
+        run: |
+          import json
+          import requests
+          import os
+          import time
+
+          # GitHub Issue Creation Helper
+          def create_issue(title, body):
+              token = os.environ.get('GH_TOKEN')
+              repo = os.environ.get('REPO')
+              url = f'https://api.github.com/repos/{repo}/issues'
+              headers = {
+                  'Authorization': f'Bearer {token}',
+                  'Accept': 'application/vnd.github.v3+json'
+              }
+              payload = {'title': title, 'body': body, 'labels': ['broken-link']}
+              res = requests.post(url, headers=headers, json=payload)
+              if res.status_code == 201:
+                  print(f'Created issue: {title}')
+              else:
+                  print(f'Failed to create issue: {res.text}')
+
+          try:
+              with open('database.json', 'r', encoding='utf-8') as f:
+                  data = json.load(f)
+          except Exception as e:
+              print(f'::error::Could not load database.json: {e}')
+              exit(1)
+
+          for steam_id, entry in data.items():
+              url = entry.get('proof_url')
+              dev_name = entry.get('name', 'Unknown')
+              
+              if not url:
+                  continue
+
+              try:
+                  # Verify link with a timeout
+                  response = requests.head(url, timeout=10, allow_redirects=True)
+                  # Some servers block HEAD, try GET if 405/403 but usually HEAD is enough for checking existence
+                  if response.status_code >= 400:
+                      # Double check with GET
+                      response = requests.get(url, timeout=10, stream=True)
+                  
+                  if response.status_code == 404:
+                      print(f'BROKEN: {url} (ID: {steam_id})')
+                      title = f"Beweis für ID {steam_id} ({dev_name}) nicht mehr erreichbar"
+                      body = f"Der Beweis-Link für den Entwickler **{dev_name}** (ID: {steam_id}) funktioniert nicht mehr.\n\nLink: {url}\n\nBitte aktualisieren oder Eintrag entfernen."
+                      create_issue(title, body)
+
+              except requests.RequestException as e:
+                  print(f'ERROR accessing {url}: {e}')
+                  # Optional: Report timeouts or connection errors too, but maybe too noisy for just one fail. 
+                  # Keeping strictly to 404/Dead links for now.
+              
+              time.sleep(1) # Be nice to servers
