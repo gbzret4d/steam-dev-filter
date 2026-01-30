@@ -151,5 +151,16 @@
         "proof_url": "https://www.eurogamer.net/the-god-who-peter-molyneux-forgot",
         "severity": "warning",
         "notes": "Godus Kickstarter promises unfulfilled. Winner of contest ignored for years."
+    },
+    "midnight_games": {
+        "name": "Midnight Works",
+        "aliases": [
+            "Midnight.Games",
+            "Midnight Works S.R.L."
+        ],
+        "type": "ASSET_FLIP",
+        "proof_url": "https://www.reddit.com/r/gamedev/comments/1ix993g/a_big_scam_company_just_stole_my_whole_game_from/",
+        "severity": "critical",
+        "notes": "Known for stealing games, mass asset flipping, and operating under multiple aliases."
     }
 }
