@@ -94,5 +94,62 @@
         "proof_url": "https://www.vice.com/en/article/steam-game-abstractism-crypto-miner-scam/",
         "severity": "critical",
         "notes": "Developer of 'Abstractism'. Used game as Trojan to mine cryptocurrency."
+    },
+    "blue_box_game_studios": {
+        "name": "Blue Box Game Studios",
+        "aliases": [],
+        "type": "RUG_PULL",
+        "proof_url": "https://en.wikipedia.org/wiki/Abandoned_(video_game)",
+        "severity": "critical",
+        "notes": "Hype-baiting with fake Silent Hill connections. Delivered nothing after years."
+    },
+    "dagestan_technology": {
+        "name": "Dagestan Technology",
+        "aliases": [
+            "D.Tech"
+        ],
+        "type": "ASSET_FLIP",
+        "proof_url": "https://www.reddit.com/r/Steam/comments/7w5d7y/valve_bans_dagestan_technology_from_steam/",
+        "severity": "critical",
+        "notes": "Notorious asset flip factory. Banned by Valve in ban wave."
+    },
+    "trek_industries": {
+        "name": "Trek Industries",
+        "aliases": [
+            "David Prassel",
+            "Spiral Game Studios"
+        ],
+        "type": "MALICIOUS",
+        "proof_url": "https://www.polygon.com/2016/6/29/12061350/orion-dev-banned-from-steam-dmca-takedown-activision-call-of-duty",
+        "severity": "critical",
+        "notes": "Stolen assets from Call of Duty. Multiple bans and rebrands."
+    },
+    "code_avarice": {
+        "name": "Code Avarice",
+        "aliases": [
+            "Mike Maulbeck"
+        ],
+        "type": "HOSTILE_DEV",
+        "proof_url": "https://www.polygon.com/2014/10/20/7024585/paranautical-activity-steam-gabe-newell-death-threat",
+        "severity": "warning",
+        "notes": "Threatened to kill Gabe Newell over a release date error. Game removed."
+    },
+    "supercrit": {
+        "name": "SuperCrit",
+        "aliases": [],
+        "type": "ABANDONWARE",
+        "proof_url": "https://www.polygon.com/2014/6/18/5820624/the-stomping-land-developer-silence-updates",
+        "severity": "warning",
+        "notes": "Abandoned 'The Stomping Land' shortly after Early Access launch."
+    },
+    "22cans": {
+        "name": "22cans",
+        "aliases": [
+            "Peter Molyneux"
+        ],
+        "type": "BROKEN_PROMISES",
+        "proof_url": "https://www.eurogamer.net/the-god-who-peter-molyneux-forgot",
+        "severity": "warning",
+        "notes": "Godus Kickstarter promises unfulfilled. Winner of contest ignored for years."
     }
 }
