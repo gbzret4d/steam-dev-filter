@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Steam Dev Filter
 // @namespace    https://github.com/gbzret4d/steam-dev-filter
-// @version      1.1
+// @version      1.2
 // @description  Warns about fraudulent Steam developers (Rug pulls, Asset Flips, etc.) based on a community database.
 // @author       Steam Dev Filter Community
 // @match        https://store.steampowered.com/*
@@ -187,8 +187,8 @@
         // This is tricky because the ID isn't always explicitly in the DOM as a plain string, 
         // usually it's part of the href.
 
-        // Iterate over all links that point to developer/publisher pages
-        const devLinks = document.querySelectorAll('a[href*="/developer/"], a[href*="/publisher/"], a[href*="/curator/"]');
+        // Iterate over all links that point to developer/publisher pages OR search pages for devs
+        const devLinks = document.querySelectorAll('a[href*="/developer/"], a[href*="/publisher/"], a[href*="/curator/"], a[href*="/search/?developer="], a[href*="/search/?publisher="]');
 
         devLinks.forEach(link => {
             // Avoid double injection
@@ -197,13 +197,46 @@
             let matchedEntry = null;
 
             // 1. ID Match from URL
-            const urlMatch = link.href.match(/\/(?:developer|publisher|curator)\/([^\/]+)/);
+            // Supports: /developer/ID, /publisher/ID, /curator/ID
+            const urlMatch = link.href.match(/\/(?:developer|publisher|curator)\/([^\/?]+)/);
             if (urlMatch) {
                 const id = urlMatch[1];
                 if (db[id]) matchedEntry = db[id];
             }
 
-            // 2. Name Match (Fallback)
+            // 1b. Search Param Match (e.g. ?developer=Name or ?id=ID)
+            if (!matchedEntry) {
+                try {
+                    const urlObj = new URL(link.href);
+                    const searchParams = urlObj.searchParams;
+
+                    // Check 'id' param
+                    if (searchParams.has('id')) {
+                        const id = searchParams.get('id');
+                        if (db[id]) matchedEntry = db[id];
+                    }
+
+                    // Check 'developer' or 'publisher' param (Search links)
+                    // these are usually Names, not IDs.
+                    if (!matchedEntry) {
+                        const devName = searchParams.get('developer') || searchParams.get('publisher');
+                        if (devName) {
+                            const name = devName.trim().toLowerCase();
+                            for (const [id, entry] of Object.entries(db)) {
+                                if (entry.name.toLowerCase() === name ||
+                                    (entry.aliases && entry.aliases.some(a => a.toLowerCase() === name))) {
+                                    matchedEntry = entry;
+                                    break;
+                                }
+                            }
+                        }
+                    }
+                } catch (e) {
+                    // Ignore invalid URLs
+                }
+            }
+
+            // 2. Name Match (Fallback from link text)
             if (!matchedEntry) {
                 const name = link.innerText.trim().toLowerCase();
                 for (const [id, entry] of Object.entries(db)) {
