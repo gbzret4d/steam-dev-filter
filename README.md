@@ -1,8 +1,6 @@
-# Steam Dev Filter
+# Steam Dev Filter 🛡️
 
-Steam Dev Filter is a community-driven database and Userscript designed to protect Steam users from fraudulent developers, scam projects, and abandoned early access games.
-
-It adds a visible warning badge next to developer names on the Steam Store, helping you make informed purchasing decisions.
+**Steam Dev Filter** is a userscript that warns you about potentially fraudulent developers on Steam (Rug pulls, Asset Flips, Hostile Developers, etc.) directly on the store page.
 
 ## Features
 
@@ -32,10 +30,14 @@ It adds a visible warning badge next to developer names on the Steam Store, help
 
 This project relies on the community to report bad actors.
 
-- **Found a scammer?** [Submit a Report](https://github.com/USERNAME/steam-dev-filter/issues/new/choose)
+- **Found a scammer?** [Submit a Report](https://github.com/gbzret4d/steam-dev-filter/issues/new/choose)
 - **Found a mistake?** Open an issue to request a correction.
 - **Developer?** Check out [CONTRIBUTING.md](CONTRIBUTING.md) to help with the code.
 
-## Disclaimer
+## Legal Disclaimer
 
-This tool is provided "as is" and represents the opinions and research of the community contributors. Always do your own research before purchasing a game.
+**Not Affiliated with Valve:** This project is a community-driven initiative and is **not** affiliated, associated, authorized, endorsed by, or in any way officially connected with **Valve Corporation** or **Steam**, or any of its subsidiaries or its affiliates. The official Steam website can be found at [http://store.steampowered.com](http://store.steampowered.com).
+
+**No Warranty:** This tool is provided "as is" and represents the opinions and research of the community contributors. The maintainers make no representations or warranties of any kind, express or implied, about the completeness, accuracy, reliability, suitability or availability with respect to the website or the information, products, services, or related graphics contained on the website for any purpose.
+
+**Fair Use:** All product and company names are trademarks™ or registered® trademarks of their respective holders. Use of them does not imply any affiliation with or endorsement by them.

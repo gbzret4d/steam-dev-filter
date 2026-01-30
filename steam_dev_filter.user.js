@@ -1,22 +1,33 @@
 // ==UserScript==
 // @name         Steam Dev Filter
-// @namespace    http://tampermonkey.net/
-// @version      1.0
+// @namespace    https://github.com/gbzret4d/steam-dev-filter
+// @version      1.1
 // @description  Warns about fraudulent Steam developers (Rug pulls, Asset Flips, etc.) based on a community database.
 // @author       Steam Dev Filter Community
 // @match        https://store.steampowered.com/*
 // @grant        GM_xmlhttpRequest
 // @grant        GM_setValue
 // @grant        GM_getValue
+// @downloadURL  https://raw.githubusercontent.com/gbzret4d/steam-dev-filter/main/steam_dev_filter.user.js
+// @updateURL    https://raw.githubusercontent.com/gbzret4d/steam-dev-filter/main/steam_dev_filter.user.js
 // @connect      raw.githubusercontent.com
 // @run-at       document-end
 // ==/UserScript==
 
-(function() {
+/*
+ * LEGAL DISCLAIMER:
+ * This script and the associated database are community-maintained projects.
+ * They are NOT affiliated with, endorsed by, or connected to Valve Corporation or Steam.
+ * All trademarks, logos, and brand names are the property of their respective owners.
+ * The data is provided "as is" based on community research and public sources.
+ */
+
+
+(function () {
     'use strict';
 
     // --- Configuration ---
-    const DB_URL = 'https://raw.githubusercontent.com/USERNAME/steam-dev-filter/main/database.json'; // TODO: Replace USERNAME
+    const DB_URL = 'https://raw.githubusercontent.com/gbzret4d/steam-dev-filter/main/database.json'; // TODO: Replace USERNAME with actual owner
     const CACHE_KEY = 'steam_dev_filter_db';
     const CACHE_TIME = 24 * 60 * 60 * 1000; // 24 hours
 
@@ -105,7 +116,7 @@
             GM_xmlhttpRequest({
                 method: "GET",
                 url: DB_URL,
-                onload: function(response) {
+                onload: function (response) {
                     try {
                         const data = JSON.parse(response.responseText);
                         GM_setValue(CACHE_KEY, { timestamp: now, data: data });
@@ -115,7 +126,7 @@
                         resolve({}); // Fail gracefully
                     }
                 },
-                onerror: function() {
+                onerror: function () {
                     console.error('[Steam Dev Filter] Network error');
                     resolve({});
                 }
@@ -131,8 +142,8 @@
             const match = link.href.match(/(?:developer|publisher|curator)\/(.+?)\/?$/);
             if (match) return match[1];
             // Also handle ?id= parameters if present in some old URLs
-             const urlParams = new URL(link.href).searchParams;
-             if (urlParams.has('id')) return urlParams.get('id');
+            const urlParams = new URL(link.href).searchParams;
+            if (urlParams.has('id')) return urlParams.get('id');
         }
         return null; // Fallback
     }
@@ -149,14 +160,14 @@
 
         const catConfig = CATEGORIES[entry.type] || { icon: "⚠️", severity: "info" };
         const labelText = I18N[LANG][entry.type] || entry.type;
-        
+
         const badge = document.createElement("span");
         badge.className = `sw-badge ${entry.severity || catConfig.severity}`;
         badge.innerHTML = `<span class="sw-icon">${catConfig.icon}</span> ${labelText}`;
-        
+
         // Tooltip logic
         badge.title = `${entry.notes}\n\n${I18N[LANG].PROOF}: ${entry.proof_url}`;
-        
+
         // Click to open proof
         badge.onclick = (e) => {
             e.preventDefault();
@@ -171,20 +182,20 @@
         // We need to match developer elements.
         // Primary Target: "Developer" field in the Store Page
         const devElements = document.querySelectorAll('.glance_ctn_responsive_left .dev_row, .apphub_AppName, #developers_list');
-        
+
         // Try precise ID match first
         // This is tricky because the ID isn't always explicitly in the DOM as a plain string, 
         // usually it's part of the href.
-        
+
         // Iterate over all links that point to developer/publisher pages
         const devLinks = document.querySelectorAll('a[href*="/developer/"], a[href*="/publisher/"], a[href*="/curator/"]');
-        
+
         devLinks.forEach(link => {
             // Avoid double injection
             if (link.nextElementSibling && link.nextElementSibling.classList.contains('sw-badge')) return;
 
             let matchedEntry = null;
-            
+
             // 1. ID Match from URL
             const urlMatch = link.href.match(/\/(?:developer|publisher|curator)\/([^\/]+)/);
             if (urlMatch) {
@@ -196,7 +207,7 @@
             if (!matchedEntry) {
                 const name = link.innerText.trim().toLowerCase();
                 for (const [id, entry] of Object.entries(db)) {
-                    if (entry.name.toLowerCase() === name || 
+                    if (entry.name.toLowerCase() === name ||
                         (entry.aliases && entry.aliases.some(a => a.toLowerCase() === name))) {
                         matchedEntry = entry;
                         break;
@@ -207,7 +218,7 @@
             if (matchedEntry) {
                 const badge = createBadge(matchedEntry);
                 if (badge) {
-                     link.parentNode.insertBefore(badge, link.nextSibling);
+                    link.parentNode.insertBefore(badge, link.nextSibling);
                 }
             }
         });
@@ -215,7 +226,7 @@
 
     async function main() {
         const db = await loadDatabase();
-        
+
         // Initial run
         processPage(db);
 
@@ -224,12 +235,12 @@
             let shouldReprocess = false;
             for (let mutation of mutations) {
                 if (mutation.addedNodes.length > 0) {
-                    shouldReprocess = true; 
+                    shouldReprocess = true;
                     break;
                 }
             }
             if (shouldReprocess) {
-                 processPage(db);
+                processPage(db);
             }
         });
 
