@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Steam Dev Filter
 // @namespace    https://github.com/gbzret4d/steam-dev-filter
-// @version      1.4
+// @version      1.5
 // @description  Warns about fraudulent Steam developers (Rug pulls, Asset Flips, etc.) based on a community database.
 // @author       Steam Dev Filter Community
 // @match        https://store.steampowered.com/*
@@ -36,7 +36,7 @@
     // Helper to detect language
     function getLang() {
         const navLang = navigator.language.slice(0, 2).toLowerCase();
-        const supported = ['de', 'en', 'fr', 'es', 'ru', 'zh'];
+        const supported = ['de', 'en', 'fr', 'es', 'ru', 'zh', 'it', 'pt', 'pl', 'tr', 'ja', 'ko'];
         return supported.includes(navLang) ? navLang : 'en';
     }
 
@@ -107,6 +107,72 @@
             UNKNOWN: "未知警告",
             LOADING: "正在加载数据...",
             PROOF: "查看证据"
+        },
+        it: {
+            RUG_PULL: "Truffa / Rug Pull",
+            ASSET_FLIP: "Asset Flip scadente",
+            MALICIOUS: "Dannoso / Bannato",
+            ABANDONWARE: "Abbandonato",
+            HOSTILE_DEV: "Sviluppatore ostile",
+            BROKEN_PROMISES: "Promesse non mantenute",
+            UNKNOWN: "Avviso sconosciuto",
+            LOADING: "Caricamento dati...",
+            PROOF: "Guarda la prova"
+        },
+        pt: {
+            RUG_PULL: "Golpe / Rug Pull",
+            ASSET_FLIP: "Asset Flip barato",
+            MALICIOUS: "Malicioso / Banido",
+            ABANDONWARE: "Abandonware",
+            HOSTILE_DEV: "Desenvolvedor hostil",
+            BROKEN_PROMISES: "Promessas quebradas",
+            UNKNOWN: "Aviso desconhecido",
+            LOADING: "Carregando dados...",
+            PROOF: "Ver prova"
+        },
+        pl: {
+            RUG_PULL: "Oszustwo / Rug Pull",
+            ASSET_FLIP: "Tani Asset Flip",
+            MALICIOUS: "Szkodliwy / Zbanowany",
+            ABANDONWARE: "Porzucony projekt",
+            HOSTILE_DEV: "Wrogi deweloper",
+            BROKEN_PROMISES: "Złamane obietnice",
+            UNKNOWN: "Nieznane ostrzeżenie",
+            LOADING: "Ładowanie danych...",
+            PROOF: "Zobacz dowód"
+        },
+        tr: {
+            RUG_PULL: "Dolandırıcılık / Rug Pull",
+            ASSET_FLIP: "Ucuz Asset Flip",
+            MALICIOUS: "Kötü Amaçlı / Yasaklı",
+            ABANDONWARE: "Terk Edilmiş Yazılım",
+            HOSTILE_DEV: "Düşman Geliştirici",
+            BROKEN_PROMISES: "Tutulmayan Sözler",
+            UNKNOWN: "Bilinmeyen Uyarı",
+            LOADING: "Veriler Yükleniyor...",
+            PROOF: "Kanıtı Gör"
+        },
+        ja: {
+            RUG_PULL: "ラグプル / 詐欺",
+            ASSET_FLIP: "安っぽいアセットフリップ",
+            MALICIOUS: "悪質 / BAN済み",
+            ABANDONWARE: "開発放棄",
+            HOSTILE_DEV: "敵対的な開発者",
+            BROKEN_PROMISES: "破られた約束",
+            UNKNOWN: "不明な警告",
+            LOADING: "読み込み中...",
+            PROOF: "証拠を見る"
+        },
+        ko: {
+            RUG_PULL: "먹튀 / 사기",
+            ASSET_FLIP: "저질 에셋 플립",
+            MALICIOUS: "악성 / 차단됨",
+            ABANDONWARE: "유기된 프로젝트",
+            HOSTILE_DEV: "적대적인 개발자",
+            BROKEN_PROMISES: "지켜지지 않은 약속",
+            UNKNOWN: "알 수 없는 경고",
+            LOADING: "데이터 로딩 중...",
+            PROOF: "증거 보기"
         }
     };
 
