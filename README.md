@@ -26,6 +26,17 @@
 | 🤐 | **HOSTILE_DEV** | Legal threats, banning critics, toxicity. |
 | 🚧 | **BROKEN_PROMISES** | Features promised (Roadmap/Kickstarter) never delivered. |
 
+
+## ⚖️ Appeals / Removal Requests
+
+If you believe a developer has been incorrectly listed, or if the situation has changed (e.g. proof of unban, change of ownership, remediation):
+
+1. Go to the [Issues](https://github.com/gbzret4d/steam-dev-filter/issues) tab.
+2. Click **New Issue** and select **Removal Request (Appeal)**.
+3. Fill out the form with your relationship to the developer, the reason for removal, and **verifiable proof**.
+4. Our automated bot will check if the developer is in our database and if your request contains the necessary proof.
+5. A maintainer will review the appeal and remove the entry if the evidence is sufficient.
+
 ## How to Contribute
 
 This project relies on the community to report bad actors.

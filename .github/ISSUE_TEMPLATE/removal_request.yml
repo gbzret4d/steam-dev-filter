@@ -1,0 +1,58 @@
+name: Removal Request (Appeal)
+description: Request removal of a developer from the filter list.
+title: "[APPEAL] <Developer Name>"
+labels: ["appeal", "triage"]
+assignees: []
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Use this form to appeal a listing in the Steam Dev Filter database.
+        Please provide clear evidence why the inclusion is incorrect or outdated.
+
+  - type: input
+    id: developer_name
+    attributes:
+      label: Developer Name
+      description: The exact name as it appears in the database.
+      placeholder: e.g. Midnight Works
+    validations:
+      required: true
+
+  - type: dropdown
+    id: relationship
+    attributes:
+      label: Your Relationship
+      description: Are you the developer or a representative?
+      options:
+        - I am the developer / official representative
+        - I am a user / fan
+        - Other
+    validations:
+      required: true
+
+  - type: textarea
+    id: reason
+    attributes:
+      label: Reason for Removal
+      description: Explain why this developer should be removed. (e.g. "Ownership changed", "Unbanned by Valve", "False Positive")
+      placeholder: We have resolved the issues...
+    validations:
+      required: true
+
+  - type: input
+    id: proof
+    attributes:
+      label: Proof / Evidence
+      description: Link to public verification (e.g. Official Statement, Valve confirmation).
+      placeholder: https://...
+    validations:
+      required: true
+
+  - type: checkbox
+    id: terms
+    attributes:
+      label: Terms
+      options:
+        - label: I understand that removal is at the discretion of the maintainers based on evidence.
+          required: true
