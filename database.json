@@ -94,5 +94,13 @@
         "proof_url": "https://www.vice.com/en/article/steam-game-abstractism-crypto-miner-scam/",
         "severity": "critical",
         "notes": "Developer of 'Abstractism'. Used game as Trojan to mine cryptocurrency."
+    },
+    "midnight_games": {
+        "name": "Midnight Works",
+        "aliases": [],
+        "type": "RUG_PULL",
+        "proof_url": "https://www.reddit.com/r/gamedev/comments/1ix993g/a_big_scam_company_just_stole_my_whole_game_from/",
+        "severity": "warning",
+        "notes": "Known for stealing games and mass asset flipping."
     }
 }
