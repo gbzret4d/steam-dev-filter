@@ -25,6 +25,7 @@
 | 🕸️ | **ABANDONWARE** | Early Access with no updates for >1 year. |
 | 🤐 | **HOSTILE_DEV** | Legal threats, banning critics, toxicity. |
 | 🚧 | **BROKEN_PROMISES** | Features promised (Roadmap/Kickstarter) never delivered. |
+| 🤖 | **AI_SLOP** | Low-effort AI-generated content (Art, Assets) with little human input. |
 
 
 ## ⚖️ Appeals / Removal Requests

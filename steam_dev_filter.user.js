@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Steam Dev Filter
 // @namespace    https://github.com/gbzret4d/steam-dev-filter
-// @version      1.6.3
+// @version      1.7.0
 // @description  Warns about fraudulent Steam developers (Rug pulls, Asset Flips, etc.) based on a community database.
 // @author       Steam Dev Filter Community
 // @match        https://store.steampowered.com/*
@@ -28,7 +28,7 @@
     'use strict';
 
     // --- Configuration ---
-    const DB_URL = 'https://raw.githubusercontent.com/gbzret4d/steam-dev-filter/main/database.json'; // TODO: Replace USERNAME with actual owner
+    const DB_URL = 'https://raw.githubusercontent.com/gbzret4d/steam-dev-filter/main/database.json';
     const CACHE_KEY = 'steam_dev_filter_db_v5';
     const CACHE_TIME = 24 * 60 * 60 * 1000; // 24 hours
     const SETTINGS_KEY = 'steam_dev_filter_settings';
@@ -258,13 +258,28 @@
 
     // --- Icons & Config ---
     const CATEGORIES = {
-        RUG_PULL: { icon: "💸", severity: "critical" },
-        ASSET_FLIP: { icon: "🗑️", severity: "critical" },
-        MALICIOUS: { icon: "☣️", severity: "critical" }, // Black often hard to read, mapping to critical/red for visibility or custom black style
-        ABANDONWARE: { icon: "🕸️", severity: "warning" },
-        HOSTILE_DEV: { icon: "🤐", severity: "warning" },
-        BROKEN_PROMISES: { icon: "🚧", severity: "warning" }
+        RUG_PULL: { icon: "💸", severity: "critical", label: "Rug Pull" },
+        ASSET_FLIP: { icon: "🗑️", severity: "critical", label: "Asset Flip" },
+        MALICIOUS: { icon: "☣️", severity: "critical", label: "Malicious" },
+        ABANDONWARE: { icon: "🕸️", severity: "warning", label: "Abandonware" },
+        HOSTILE_DEV: { icon: "🤐", severity: "warning", label: "Hostile Dev" },
+        BROKEN_PROMISES: { icon: "🚧", severity: "warning", label: "Broken Promises" },
+        AI_SLOP: { icon: "🤖", severity: "warning", label: "AI Slop" }
     };
+
+    function getWorstCategory(categoryKeys) {
+        if (!Array.isArray(categoryKeys)) categoryKeys = [categoryKeys];
+
+        let worst = null;
+        for (const key of categoryKeys) {
+            const cat = CATEGORIES[key];
+            if (!cat) continue;
+            if (!worst || (cat.severity === 'critical' && worst.severity !== 'critical')) {
+                worst = { ...cat, key }; // Keep the metadata
+            }
+        }
+        return worst;
+    }
 
     // Add styles to head
     const styleSheet = document.createElement("style");
@@ -331,16 +346,20 @@
         if (!entry) return null;
         if (currentSettings.disabledCategories.includes(entry.type)) return null;
 
-        const catConfig = CATEGORIES[entry.type] || { icon: "⚠️", severity: "info" };
-        const labelText = I18N[LANG][entry.type] || entry.type;
+        const typeList = Array.isArray(entry.type) ? entry.type : [entry.type];
+        const primaryCatKey = getWorstCategory(typeList).key || typeList[0];
+        const catConfig = CATEGORIES[primaryCatKey] || { icon: "⚠️", severity: "info" };
+        const labelText = I18N[LANG][primaryCatKey] || primaryCatKey;
 
         const badge = document.createElement("span");
-        badge.className = `sw-badge ${entry.severity || catConfig.severity}`;
+        badge.className = `sw-badge ${catConfig.severity}`;
         badge.innerHTML = `<span class="sw-icon">${catConfig.icon}</span> ${labelText}`;
 
         // Tooltip logic
-        const proofUrl = `https://github.com/gbzret4d/steam-dev-filter/blob/main/PROOFS.md#${id}`;
-        badge.title = `${entry.notes}\n\n${I18N[LANG].PROOF}`;
+        // Use typeList to show all categories
+        const allLabels = typeList.map(t => I18N[LANG][t] || t).join(', ');
+        const proofUrl = entry.proof_url || `https://github.com/gbzret4d/steam-dev-filter/blob/main/PROOFS.md#${id}`;
+        badge.title = `${entry.name}\nFlags: ${allLabels}\n\n${entry.notes}\n\n${I18N[LANG].PROOF}`;
 
         // Click to open proof
         badge.onclick = (e) => {

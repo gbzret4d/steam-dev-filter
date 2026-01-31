@@ -18,6 +18,139 @@ Last Updated: 2026-01-31
 
 ---
 
+## <a id="4netgames"></a>4NetGames
+
+- **Category**: ABANDONWARE
+- **Severity**: WARNING
+- **Notes**: Abandoned 'Lonath Online'.
+- **Evidence**:
+  - [Primary Source](https://mmofallout.com/list-of-abandoned-steam-early-access-games/)
+
+---
+
+## <a id="aidangig"></a>Aidangig
+
+- **Category**: ABANDONWARE
+- **Severity**: WARNING
+- **Notes**: Abandoned 'Flash Point'.
+- **Evidence**:
+  - [Primary Source](https://mmofallout.com/list-of-abandoned-steam-early-access-games/)
+
+---
+
+## <a id="aleksei_milchakov"></a>Aleksei Milchakov
+
+- **Category**: ABANDONWARE
+- **Severity**: WARNING
+- **Notes**: Abandoned 'Exile to Death'.
+- **Evidence**:
+  - [Primary Source](https://mmofallout.com/list-of-abandoned-steam-early-access-games/)
+
+---
+
+## <a id="ao_games_studios"></a>AO Games Studios
+
+- **Category**: ABANDONWARE
+- **Severity**: WARNING
+- **Notes**: Abandoned 'Build It'.
+- **Evidence**:
+  - [Primary Source](https://mmofallout.com/list-of-abandoned-steam-early-access-games/)
+
+---
+
+## <a id="arcaneraise"></a>ArcaneRaise
+
+- **Category**: ASSET_FLIP
+- **Severity**: CRITICAL
+- **Aliases**: RetriButioN, R3TR1X
+- **Notes**: Spamming low quality asset flips and scam DLCs.
+- **Evidence**:
+  - [Primary Source](https://www.reddit.com/r/Steam/comments/7c504u/arcaneraise_developer_is_using_multiple_alts_to/)
+
+---
+
+## <a id="asylum_entertainment"></a>Asylum Entertainment Inc.
+
+- **Category**: ABANDONWARE,BROKEN_PROMISES
+- **Severity**: CRITICAL
+- **Notes**: Raised $1.5M+ for 'Identity RPG'. Delivered 10% of game, then abandoned it.
+- **Evidence**:
+  - [Primary Source](https://mmofallout.com/identity-rpg-developers-claim-to-be-working-on-it/)
+
+---
+
+## <a id="atomic_fabrik"></a>Atomic Fabrik
+
+- **Category**: ASSET_FLIP
+- **Severity**: CRITICAL
+- **Aliases**: Atomic Fabrik Inc., Cristian Manolachi
+- **Notes**: Operates under dozens of fake company names. Known for low-quality asset flips and key reselling schemes.
+- **Evidence**:
+  - [Primary Source](https://www.reddit.com/r/Steam/comments/q4j63s/atomic_fabrik_is_back_at_it_again/)
+
+---
+
+## <a id="ba_d"></a>BA.D.
+
+- **Category**: ABANDONWARE
+- **Severity**: WARNING
+- **Notes**: Abandoned 'Warma Online'.
+- **Evidence**:
+  - [Primary Source](https://mmofallout.com/list-of-abandoned-steam-early-access-games/)
+
+---
+
+## <a id="because_i_can"></a>Because I Can
+
+- **Category**: ABANDONWARE
+- **Severity**: WARNING
+- **Notes**: Abandoned 'Hurricane'.
+- **Evidence**:
+  - [Primary Source](https://mmofallout.com/list-of-abandoned-steam-early-access-games/)
+
+---
+
+## <a id="berdyev"></a>Berdyev
+
+- **Category**: ASSET_FLIP
+- **Severity**: CRITICAL
+- **Aliases**: Birdiev, Bertiev, BCInteractive
+- **Notes**: Notorious asset flipper and critic banner. 'Willingly scams consumers' (SidAlpha).
+- **Evidence**:
+  - [Primary Source](https://www.youtube.com/results?search_query=SidAlpha+Dirty+Devs+I%27m+Looking+for+3024+People)
+
+---
+
+## <a id="bitmonster"></a>BitMonster
+
+- **Category**: ABANDONWARE
+- **Severity**: WARNING
+- **Notes**: Abandoned 'GRAV' in Early Access to work on other projects.
+- **Evidence**:
+  - [Primary Source](https://steamcommunity.com/app/332500/discussions/0/135509823662557688/)
+
+---
+
+## <a id="black_riddles_studio"></a>Black Riddles Studio Ltd
+
+- **Category**: ABANDONWARE
+- **Severity**: WARNING
+- **Notes**: Crowdfunded 'Crazy Justice' and went silent for years.
+- **Evidence**:
+  - [Primary Source](https://www.eurogamer.net/crazy-justice-dev-goes-silent-as-backers-fear-for-switch-battle-royale)
+
+---
+
+## <a id="black_snake_games"></a>Black Snake Games
+
+- **Category**: ABANDONWARE
+- **Severity**: WARNING
+- **Notes**: Abandoned 'The Region'.
+- **Evidence**:
+  - [Primary Source](https://mmofallout.com/list-of-abandoned-steam-early-access-games/)
+
+---
+
 ## <a id="blue_box_game_studios"></a>Blue Box Game Studios
 
 - **Category**: RUG_PULL
@@ -25,6 +158,26 @@ Last Updated: 2026-01-31
 - **Notes**: Hype-baiting with fake Silent Hill connections. Delivered nothing after years.
 - **Evidence**:
   - [Primary Source](https://en.wikipedia.org/wiki/Abandoned_(video_game))
+
+---
+
+## <a id="bread_vision_studios_llc"></a>Bread Vision Studios LLC
+
+- **Category**: ABANDONWARE
+- **Severity**: WARNING
+- **Notes**: Abandoned 'Mystica: The Ninth Society'.
+- **Evidence**:
+  - [Primary Source](https://mmofallout.com/list-of-abandoned-steam-early-access-games/)
+
+---
+
+## <a id="bytebin"></a>Bytebin
+
+- **Category**: ABANDONWARE
+- **Severity**: WARNING
+- **Notes**: Abandoned 'Deepworld'.
+- **Evidence**:
+  - [Primary Source](https://mmofallout.com/list-of-abandoned-steam-early-access-games/)
 
 ---
 
@@ -49,6 +202,36 @@ Last Updated: 2026-01-31
 
 ---
 
+## <a id="cold_tea_studio"></a>Cold Tea Studio
+
+- **Category**: ABANDONWARE
+- **Severity**: WARNING
+- **Notes**: Abandoned 'Fantasy Tales Online'.
+- **Evidence**:
+  - [Primary Source](https://mmofallout.com/list-of-abandoned-steam-early-access-games/)
+
+---
+
+## <a id="cool_devs_srl"></a>COOL DEVS S.R.L.
+
+- **Category**: MALICIOUS
+- **Severity**: CRITICAL
+- **Notes**: Implicated in stealing entire games (e.g. 'The Backrooms 1998') and republishing them.
+- **Evidence**:
+  - [Primary Source](https://www.reddit.com/r/Steam/comments/13u4j8q/beware_of_cool_devs_srl_they_stole_my_game/)
+
+---
+
+## <a id="cruderocks"></a>Cruderocks
+
+- **Category**: ABANDONWARE
+- **Severity**: WARNING
+- **Notes**: Abandoned 'High Octane Drift'.
+- **Evidence**:
+  - [Primary Source](https://mmofallout.com/list-of-abandoned-steam-early-access-games/)
+
+---
+
 ## <a id="dagestan_technology"></a>Dagestan Technology
 
 - **Category**: ASSET_FLIP
@@ -60,14 +243,44 @@ Last Updated: 2026-01-31
 
 ---
 
+## <a id="dexion_games"></a>Dexion Games
+
+- **Category**: ASSET_FLIP
+- **Severity**: CRITICAL
+- **Notes**: Corrupt asset flipper renaming kits as full games.
+- **Evidence**:
+  - [Primary Source](https://www.youtube.com/watch?v=1x9_oHw1jT0)
+
+---
+
+## <a id="digital_dawn_studios"></a>Digital Dawn Studios
+
+- **Category**: ABANDONWARE
+- **Severity**: WARNING
+- **Notes**: Abandoned 'Sirius Online'.
+- **Evidence**:
+  - [Primary Source](https://mmofallout.com/list-of-abandoned-steam-early-access-games/)
+
+---
+
 ## <a id="digital_homicide_studios"></a>Digital Homicide Studios
 
 - **Category**: HOSTILE_DEV
 - **Severity**: WARNING
-- **Aliases**: Digital Homicide, Seven-G
+- **Aliases**: Digital Homicide, Seven-G, ImminentUprising, Loot Toot Games, Micro Strategic Game Designs, ECC Games
 - **Notes**: Sued 100 Steam users for bad reviews. Banned by Valve.
 - **Evidence**:
   - [Primary Source](https://en.wikipedia.org/wiki/Digital_Homicide_Studios)
+
+---
+
+## <a id="dmitry_medvedev"></a>Dmitry Medvedev
+
+- **Category**: ABANDONWARE
+- **Severity**: WARNING
+- **Notes**: Abandoned 'Impulse of War'.
+- **Evidence**:
+  - [Primary Source](https://mmofallout.com/list-of-abandoned-steam-early-access-games/)
 
 ---
 
@@ -78,6 +291,67 @@ Last Updated: 2026-01-31
 - **Notes**: Banned for hateful conduct and transphobic patch notes.
 - **Evidence**:
   - [Primary Source](https://www.pcgamer.com/domina-developer-banned-from-steam-after-transphobic-rant-in-patch-notes/)
+
+---
+
+## <a id="echoboom_sl"></a>Echoboom S.L.
+
+- **Category**: ABANDONWARE
+- **Severity**: WARNING
+- **Notes**: Abandoned 'Dogfight Elite'.
+- **Evidence**:
+  - [Primary Source](https://mmofallout.com/list-of-abandoned-steam-early-access-games/)
+
+---
+
+## <a id="eforb"></a>Eforb
+
+- **Category**: ABANDONWARE
+- **Severity**: WARNING
+- **Notes**: Abandoned 'Intershelter'.
+- **Evidence**:
+  - [Primary Source](https://mmofallout.com/list-of-abandoned-steam-early-access-games/)
+
+---
+
+## <a id="fadygames"></a>FadyGames
+
+- **Category**: ASSET_FLIP
+- **Severity**: CRITICAL
+- **Aliases**: Galescorp, ImperiumGame, Reforged Group
+- **Notes**: Known for fake crypto and asset flip scams.
+- **Evidence**:
+  - [Primary Source](https://steamcommunity.com/discussions/forum/0/4206994023681438994/)
+
+---
+
+## <a id="fairytale_distillery"></a>Fairytale Distillery
+
+- **Category**: ABANDONWARE
+- **Severity**: WARNING
+- **Notes**: Abandoned 'The Exiled'.
+- **Evidence**:
+  - [Primary Source](https://mmofallout.com/list-of-abandoned-steam-early-access-games/)
+
+---
+
+## <a id="faith_kaya"></a>Faith KAYA
+
+- **Category**: ABANDONWARE
+- **Severity**: WARNING
+- **Notes**: Abandoned 'Fantasy ERA'.
+- **Evidence**:
+  - [Primary Source](https://mmofallout.com/list-of-abandoned-steam-early-access-games/)
+
+---
+
+## <a id="fever_game_studios"></a>Fever Game Studios
+
+- **Category**: ABANDONWARE
+- **Severity**: WARNING
+- **Notes**: Abandoned 'The Last Front'.
+- **Evidence**:
+  - [Primary Source](https://mmofallout.com/list-of-abandoned-steam-early-access-games/)
 
 ---
 
@@ -92,6 +366,16 @@ Last Updated: 2026-01-31
 
 ---
 
+## <a id="gdt_limited"></a>GDT Limited
+
+- **Category**: ABANDONWARE
+- **Severity**: WARNING
+- **Notes**: Abandoned 'Metal War Online: Retribution'.
+- **Evidence**:
+  - [Primary Source](https://mmofallout.com/list-of-abandoned-steam-early-access-games/)
+
+---
+
 ## <a id="hammerpoint_interactive"></a>Hammerpoint Interactive
 
 - **Category**: BROKEN_PROMISES
@@ -99,6 +383,38 @@ Last Updated: 2026-01-31
 - **Notes**: The War Z controversy. False advertising and microtransactions in paid alpha.
 - **Evidence**:
   - [Primary Source](https://en.wikipedia.org/wiki/Infestation:_Survivor_Stories)
+
+---
+
+## <a id="hede"></a>HEDE
+
+- **Category**: ASSET_FLIP
+- **Severity**: CRITICAL
+- **Aliases**: Hede Games, Top-Down Games
+- **Notes**: Spams hundreds of low-effort games and achievement spam titles.
+- **Evidence**:
+  - [Primary Source](https://steamcommunity.com/groups/Sentinels_of_the_Store/discussions/0/3183488224898733333/)
+
+---
+
+## <a id="hyper_hippo_games"></a>Hyper Hippo Games
+
+- **Category**: ABANDONWARE
+- **Severity**: WARNING
+- **Notes**: Abandoned 'Wild Warfare' in Early Access.
+- **Evidence**:
+  - [Primary Source](https://mmofallout.com/list-of-abandoned-steam-early-access-games/)
+
+---
+
+## <a id="insane_unity"></a>Insane Unity
+
+- **Category**: ABANDONWARE
+- **Severity**: WARNING
+- **Aliases**: Bidaj
+- **Notes**: Abandoned 'Win That War!'.
+- **Evidence**:
+  - [Primary Source](https://mmofallout.com/list-of-abandoned-steam-early-access-games/)
 
 ---
 
@@ -113,6 +429,26 @@ Last Updated: 2026-01-31
 
 ---
 
+## <a id="iron_bit"></a>Iron Bit
+
+- **Category**: ABANDONWARE
+- **Severity**: WARNING
+- **Notes**: Abandoned 'Colonies Online' shortly after Early Access release.
+- **Evidence**:
+  - [Primary Source](https://steamcommunity.com/app/283100/discussions/0/613958868352112282/)
+
+---
+
+## <a id="little_big_mmo"></a>Little Big MMO
+
+- **Category**: ABANDONWARE
+- **Severity**: WARNING
+- **Notes**: Abandoned 'Gangs of Space'.
+- **Evidence**:
+  - [Primary Source](https://mmofallout.com/list-of-abandoned-steam-early-access-games/)
+
+---
+
 ## <a id="midnight_games"></a>Midnight Works
 
 - **Category**: ASSET_FLIP
@@ -121,6 +457,16 @@ Last Updated: 2026-01-31
 - **Notes**: Known for stealing games, mass asset flipping, and operating under multiple aliases.
 - **Evidence**:
   - [Primary Source](https://www.reddit.com/r/gamedev/comments/1ix993g/a_big_scam_company_just_stole_my_whole_game_from/)
+
+---
+
+## <a id="move_games_co_ltd"></a>Move Games Co. Ltd.
+
+- **Category**: ABANDONWARE
+- **Severity**: WARNING
+- **Notes**: Abandoned 'Redemption'.
+- **Evidence**:
+  - [Primary Source](https://mmofallout.com/list-of-abandoned-steam-early-access-games/)
 
 ---
 
@@ -135,6 +481,17 @@ Last Updated: 2026-01-31
 
 ---
 
+## <a id="nvizzio_creations"></a>Nvizzio Creations
+
+- **Category**: ABANDONWARE
+- **Severity**: WARNING
+- **Aliases**: Darewise Entertainment
+- **Notes**: Abandoned 'ROKH' due to lack of funding. Game removed from Steam.
+- **Evidence**:
+  - [Primary Source](https://en.wikipedia.org/wiki/Rokh_(video_game))
+
+---
+
 ## <a id="okalo_union"></a>Okalo Union
 
 - **Category**: MALICIOUS
@@ -146,14 +503,76 @@ Last Updated: 2026-01-31
 
 ---
 
+## <a id="owl_tribe_entertainment"></a>Owl Tribe Entertainment
+
+- **Category**: ABANDONWARE
+- **Severity**: WARNING
+- **Notes**: Abandoned 'Slay Together'.
+- **Evidence**:
+  - [Primary Source](https://mmofallout.com/list-of-abandoned-steam-early-access-games/)
+
+---
+
+## <a id="rakuel"></a>Rakuel
+
+- **Category**: AI_SLOP
+- **Severity**: WARNING
+- **Aliases**: Eero Laine
+- **Notes**: Admitted to releasing 'Hardest' with low-effort AI assets. Self-delisted as a 'disgrace'.
+- **Evidence**:
+  - [Primary Source](https://www.videogameschronicle.com/news/steam-game-hardest-delisted-after-developer-admits-using-ai-assets-was-unethical/)
+
+---
+
+## <a id="red_abyss_software"></a>Red Abyss Software
+
+- **Category**: ABANDONWARE
+- **Severity**: WARNING
+- **Notes**: Abandoned 'Hide & Hold Out – H2O'.
+- **Evidence**:
+  - [Primary Source](https://mmofallout.com/list-of-abandoned-steam-early-access-games/)
+
+---
+
+## <a id="rosa_special_studio"></a>Rosa Special Studio
+
+- **Category**: ASSET_FLIP
+- **Severity**: CRITICAL
+- **Aliases**: 玫瑰工作室
+- **Notes**: Asset flip publisher.
+- **Evidence**:
+  - [Primary Source](https://steamcommunity.com/groups/Sentinels_of_the_Store/discussions/0/3283695240294726590/)
+
+---
+
+## <a id="self_destruction_games"></a>Self Destruction Games
+
+- **Category**: ABANDONWARE
+- **Severity**: WARNING
+- **Notes**: Abandoned 'Exchange'.
+- **Evidence**:
+  - [Primary Source](https://mmofallout.com/list-of-abandoned-steam-early-access-games/)
+
+---
+
 ## <a id="silicon_echo_studios"></a>Silicon Echo Studios
 
 - **Category**: ASSET_FLIP
 - **Severity**: CRITICAL
-- **Aliases**: Zonitron Productions
+- **Aliases**: Zonitron Productions, Zonitron Studios, Anteater Games, Broadplay Games, Crimson Duck Studios, Digital Airony, Digital Carrot, Floop Productions, GooCubelets Games, Netfork Studios, Pixberry Studios
 - **Notes**: Spammed 200+ asset flip games. Banned by Valve in 2017.
 - **Evidence**:
   - [Primary Source](https://www.polygon.com/2017/9/26/16368178/steam-shovelware-removed-asset-flipping)
+
+---
+
+## <a id="slav_pankratov"></a>Slav Pankratov
+
+- **Category**: ABANDONWARE
+- **Severity**: WARNING
+- **Notes**: Abandoned 'Voice of Pripyat'.
+- **Evidence**:
+  - [Primary Source](https://mmofallout.com/list-of-abandoned-steam-early-access-games/)
 
 ---
 
@@ -168,6 +587,47 @@ Last Updated: 2026-01-31
 
 ---
 
+## <a id="snail_games"></a>Snail Games
+
+- **Category**: ABANDONWARE,BROKEN_PROMISES
+- **Severity**: WARNING
+- **Aliases**: Snail Games USA
+- **Notes**: Publisher notorious for abandoning games (Atlas, Dark and Light) and aggressive monetization.
+- **Evidence**:
+  - [Primary Source](https://www.pcgamer.com/atlas-devs-apologize-for-rocky-launch-state-of-the-game/)
+
+---
+
+## <a id="sneirox"></a>Sneirox
+
+- **Category**: ABANDONWARE
+- **Severity**: WARNING
+- **Notes**: Abandoned 'Sneiroball'.
+- **Evidence**:
+  - [Primary Source](https://mmofallout.com/list-of-abandoned-steam-early-access-games/)
+
+---
+
+## <a id="stained_glass_llama"></a>Stained Glass Llama
+
+- **Category**: ABANDONWARE
+- **Severity**: WARNING
+- **Notes**: Abandoned 'Divergence: Online' and 'Divergence: Year Zero'.
+- **Evidence**:
+  - [Primary Source](https://mmofallout.com/list-of-abandoned-steam-early-access-games/)
+
+---
+
+## <a id="star_vault_ab"></a>Star Vault AB
+
+- **Category**: ABANDONWARE
+- **Severity**: WARNING
+- **Notes**: Abandoned 'Mortal Royale'.
+- **Evidence**:
+  - [Primary Source](https://mmofallout.com/list-of-abandoned-steam-early-access-games/)
+
+---
+
 ## <a id="supercrit"></a>SuperCrit
 
 - **Category**: ABANDONWARE
@@ -175,6 +635,27 @@ Last Updated: 2026-01-31
 - **Notes**: Abandoned 'The Stomping Land' shortly after Early Access launch.
 - **Evidence**:
   - [Primary Source](https://www.polygon.com/2014/6/18/5820624/the-stomping-land-developer-silence-updates)
+
+---
+
+## <a id="teletower_studios"></a>Teletower Studios
+
+- **Category**: ABANDONWARE
+- **Severity**: WARNING
+- **Notes**: Abandoned 'Road Dogs'.
+- **Evidence**:
+  - [Primary Source](https://mmofallout.com/list-of-abandoned-steam-early-access-games/)
+
+---
+
+## <a id="tero"></a>Tero
+
+- **Category**: ASSET_FLIP
+- **Severity**: CRITICAL
+- **Aliases**: Tero Lunkka, Valkeala Software, ZERO5GAMES
+- **Notes**: Prolific asset flipper (e.g. 'Spartinator', 'Money Heist Thief 2').
+- **Evidence**:
+  - [Primary Source](https://steamcommunity.com/app/1222340/discussions/0/3114770279398533816/)
 
 ---
 
@@ -186,6 +667,68 @@ Last Updated: 2026-01-31
 - **Notes**: Stolen assets from Call of Duty. Multiple bans and rebrands.
 - **Evidence**:
   - [Primary Source](https://www.polygon.com/2016/6/29/12061350/orion-dev-banned-from-steam-dmca-takedown-activision-call-of-duty)
+
+---
+
+## <a id="unexevo"></a>UnexEvo
+
+- **Category**: ABANDONWARE
+- **Severity**: WARNING
+- **Notes**: Abandoned 'Riding Out'.
+- **Evidence**:
+  - [Primary Source](https://mmofallout.com/list-of-abandoned-steam-early-access-games/)
+
+---
+
+## <a id="universe"></a>Universe
+
+- **Category**: ABANDONWARE
+- **Severity**: WARNING
+- **Notes**: Abandoned 'Space Universe'.
+- **Evidence**:
+  - [Primary Source](https://mmofallout.com/list-of-abandoned-steam-early-access-games/)
+
+---
+
+## <a id="valga_games_studio"></a>Valga Games Studio
+
+- **Category**: ABANDONWARE
+- **Severity**: WARNING
+- **Notes**: Abandoned 'Ancient Siberia'.
+- **Evidence**:
+  - [Primary Source](https://mmofallout.com/list-of-abandoned-steam-early-access-games/)
+
+---
+
+## <a id="wild_game_studios"></a>Wild Game Studios
+
+- **Category**: HOSTILE_DEV
+- **Severity**: WARNING
+- **Aliases**: Ouija Studios
+- **Notes**: Abused DMCA to censor negative reviews (TotalBiscuit). Accused of review manipulation.
+- **Evidence**:
+  - [Primary Source](https://en.wikipedia.org/wiki/Day_One:_Garry%27s_Incident)
+
+---
+
+## <a id="wild_wolf_std"></a>Wild Wolf Std
+
+- **Category**: ABANDONWARE
+- **Severity**: WARNING
+- **Notes**: Abandoned 'Badland Bandits'.
+- **Evidence**:
+  - [Primary Source](https://mmofallout.com/list-of-abandoned-steam-early-access-games/)
+
+---
+
+## <a id="xjum"></a>Xjum
+
+- **Category**: RUG_PULL
+- **Severity**: CRITICAL
+- **Aliases**: Gummy52
+- **Notes**: Developer of 'Dreadmyst'. Accused of scamming players and using stolen assets.
+- **Evidence**:
+  - [Primary Source](https://www.reddit.com/r/Steam/comments/16x9g3s/dreadmyst_developer_xjum_is_a_scammer/)
 
 ---
 
