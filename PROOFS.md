@@ -247,7 +247,7 @@ Last Updated: 2026-01-31
 - **Category**: ABANDONWARE,BROKEN_PROMISES
 - **Severity**: WARNING
 - **Aliases**: Snail Games USA
-- **Notes**: History of abandoning games (Atlas) and poor optimization. Ark controversies.
+- **Notes**: undefined
 - **Evidence**:
   - [Primary Source](https://www.pcgamer.com/atlas-devs-apologize-for-rocky-launch-state-of-the-game/)
 
