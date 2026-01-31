@@ -13,7 +13,11 @@
         "name": "Digital Homicide Studios",
         "aliases": [
             "Digital Homicide",
-            "Seven-G"
+            "Seven-G",
+            "ImminentUprising",
+            "Loot Toot Games",
+            "Micro Strategic Game Designs",
+            "ECC Games"
         ],
         "type": "HOSTILE_DEV",
         "proof_url": "https://en.wikipedia.org/wiki/Digital_Homicide_Studios",
@@ -23,12 +27,32 @@
     "silicon_echo_studios": {
         "name": "Silicon Echo Studios",
         "aliases": [
-            "Zonitron Productions"
+            "Zonitron Productions",
+            "Zonitron Studios",
+            "Anteater Games",
+            "Broadplay Games",
+            "Crimson Duck Studios",
+            "Digital Airony",
+            "Digital Carrot",
+            "Floop Productions",
+            "GooCubelets Games",
+            "Netfork Studios",
+            "Pixberry Studios"
         ],
         "type": "ASSET_FLIP",
         "proof_url": "https://www.polygon.com/2017/9/26/16368178/steam-shovelware-removed-asset-flipping",
         "severity": "critical",
         "notes": "Spammed 200+ asset flip games. Banned by Valve in 2017."
+    },
+    "wild_game_studios": {
+        "name": "Wild Game Studios",
+        "aliases": [
+            "Ouija Studios"
+        ],
+        "type": "HOSTILE_DEV",
+        "proof_url": "https://en.wikipedia.org/wiki/Day_One:_Garry%27s_Incident",
+        "severity": "warning",
+        "notes": "Abused DMCA to censor negative reviews (TotalBiscuit). Accused of review manipulation."
     },
     "dolphin_barn_incorporated": {
         "name": "Dolphin Barn Incorporated",
@@ -163,5 +187,45 @@
         "proof_url": "https://www.reddit.com/r/gamedev/comments/1ix993g/a_big_scam_company_just_stole_my_whole_game_from/",
         "severity": "critical",
         "notes": "Known for stealing games, mass asset flipping, and operating under multiple aliases."
+    },
+    "atomic_fabrik": {
+        "name": "Atomic Fabrik",
+        "aliases": [
+            "Atomic Fabrik Inc.",
+            "Cristian Manolachi"
+        ],
+        "type": "ASSET_FLIP",
+        "proof_url": "https://www.reddit.com/r/Steam/comments/q4j63s/atomic_fabrik_is_back_at_it_again/",
+        "severity": "critical",
+        "notes": "Operates under dozens of fake company names. Known for low-quality asset flips and key reselling schemes."
+    },
+    "hede": {
+        "name": "HEDE",
+        "aliases": [
+            "Hede Games",
+            "Top-Down Games"
+        ],
+        "type": "ASSET_FLIP",
+        "proof_url": "https://steamcommunity.com/groups/Sentinels_of_the_Store/discussions/0/3183488224898733333/",
+        "severity": "critical",
+        "notes": "Spams hundreds of low-effort games and achievement spam titles."
+    },
+    "cool_devs_srl": {
+        "name": "COOL DEVS S.R.L.",
+        "aliases": [],
+        "type": "MALICIOUS",
+        "proof_url": "https://www.reddit.com/r/Steam/comments/13u4j8q/beware_of_cool_devs_srl_they_stole_my_game/",
+        "severity": "critical",
+        "notes": "Implicated in stealing entire games (e.g. 'The Backrooms 1998') and republishing them."
+    },
+    "xjum": {
+        "name": "Xjum",
+        "aliases": [
+            "Gummy52"
+        ],
+        "type": "RUG_PULL",
+        "proof_url": "https://www.reddit.com/r/Steam/comments/16x9g3s/dreadmyst_developer_xjum_is_a_scammer/",
+        "severity": "critical",
+        "notes": "Developer of 'Dreadmyst'. Accused of scamming players and using stolen assets."
     }
 }
