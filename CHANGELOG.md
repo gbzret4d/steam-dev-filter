@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file.
 
+## [1.6.0] - 2026-01-31
+### Added
+- Userscript Settings Menu (Language override, Category toggles).
+- Export/Import functionality for settings.
+- Initial project infrastructure (ESLint, Prettier, Jest, JSON Schema).
+- Community documentation (CoC, Security).
+
 ## [1.5.0] - 2026-01-31
 ### Added
 - Translations for Italian (it), Portuguese (pt), Polish (pl), Turkish (tr), Japanese (ja), Korean (ko).
