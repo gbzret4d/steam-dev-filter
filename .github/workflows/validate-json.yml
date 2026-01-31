@@ -30,7 +30,7 @@ jobs:
           import sys
 
           REQUIRED_FIELDS = ['name', 'aliases', 'type', 'proof_url', 'severity', 'notes']
-          VALID_TYPES = ['RUG_PULL', 'ASSET_FLIP', 'MALICIOUS', 'ABANDONWARE', 'HOSTILE_DEV', 'BROKEN_PROMISES']
+          VALID_TYPES = ['RUG_PULL', 'ASSET_FLIP', 'MALICIOUS', 'ABANDONWARE', 'HOSTILE_DEV', 'BROKEN_PROMISES', 'AI_SLOP']
           VALID_SEVERITIES = ['critical', 'warning', 'info']
 
           try:

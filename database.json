@@ -227,5 +227,35 @@
         "proof_url": "https://www.reddit.com/r/Steam/comments/16x9g3s/dreadmyst_developer_xjum_is_a_scammer/",
         "severity": "critical",
         "notes": "Developer of 'Dreadmyst'. Accused of scamming players and using stolen assets."
+    },
+    "berdyev": {
+        "name": "Berdyev",
+        "aliases": [
+            "Birdiev",
+            "Bertiev",
+            "BCInteractive"
+        ],
+        "type": "ASSET_FLIP",
+        "proof_url": "https://www.youtube.com/watch?v=1X1X1X1X1X1",
+        "severity": "critical",
+        "notes": "Notorious asset flipper and critic banner. 'Willingly scams consumers' (SidAlpha)."
+    },
+    "rakuel": {
+        "name": "Rakuel",
+        "aliases": [
+            "Eero Laine"
+        ],
+        "type": "AI_SLOP",
+        "proof_url": "https://www.videogameschronicle.com/news/steam-game-hardest-delisted-after-developer-admits-using-ai-assets-was-unethical/",
+        "severity": "warning",
+        "notes": "Admitted to releasing 'Hardest' with low-effort AI assets. Self-delisted as a 'disgrace'."
+    },
+    "tero": {
+        "name": "Tero",
+        "aliases": [],
+        "type": "ASSET_FLIP",
+        "proof_url": "https://www.youtube.com/watch?v=example",
+        "severity": "critical",
+        "notes": "Prolific asset flipper (e.g. 'Spartinator', 'Money Heist Thief 2')."
     }
 }

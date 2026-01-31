@@ -263,7 +263,8 @@
         MALICIOUS: { icon: "☣️", severity: "critical" }, // Black often hard to read, mapping to critical/red for visibility or custom black style
         ABANDONWARE: { icon: "🕸️", severity: "warning" },
         HOSTILE_DEV: { icon: "🤐", severity: "warning" },
-        BROKEN_PROMISES: { icon: "🚧", severity: "warning" }
+        BROKEN_PROMISES: { icon: "🚧", severity: "warning" },
+        AI_SLOP: { icon: "🤖", severity: "warning" }
     };
 
     // Add styles to head
