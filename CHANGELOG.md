@@ -2,6 +2,11 @@
 
 All notable changes to this project will be documented in this file.
 
+## [1.6.2] - 2026-01-31
+### Fixed
+- Fixed issue where badges were hidden by Steam's layout truncation (CSS overflow fix).
+- Corrected badge matching for "Midnight Games".
+
 ## [1.6.1] - 2026-01-31
 ### Fixed
 - Added "Midnight Games" alias to `database.json` to fix matching on certain store pages.

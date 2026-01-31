@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Steam Dev Filter
 // @namespace    https://github.com/gbzret4d/steam-dev-filter
-// @version      1.6.1
+// @version      1.6.2
 // @description  Warns about fraudulent Steam developers (Rug pulls, Asset Flips, etc.) based on a community database.
 // @author       Steam Dev Filter Community
 // @match        https://store.steampowered.com/*
@@ -29,7 +29,7 @@
 
     // --- Configuration ---
     const DB_URL = 'https://raw.githubusercontent.com/gbzret4d/steam-dev-filter/main/database.json'; // TODO: Replace USERNAME with actual owner
-    const CACHE_KEY = 'steam_dev_filter_db_v3';
+    const CACHE_KEY = 'steam_dev_filter_db_v4';
     const CACHE_TIME = 24 * 60 * 60 * 1000; // 24 hours
     const SETTINGS_KEY = 'steam_dev_filter_settings';
 
@@ -247,6 +247,13 @@
         .sw-checkbox-group label { display: block; margin-bottom: 5px; cursor: pointer; }
         .sw-textarea { width: 100%; height: 100px; background: #000; color: #fff; border: 1px solid #4b6680; }
         .sw-close { float: right; cursor: pointer; font-size: 20px; }
+
+        /* Steam Layout Fixes */
+        .glance_ctn_responsive_left .dev_row .summary {
+            overflow: visible !important;
+            white-space: normal !important;
+            text-overflow: clip !important;
+        }
     `;
 
     // --- Icons & Config ---
