@@ -28,7 +28,7 @@
     'use strict';
 
     // --- Configuration ---
-    const DB_URL = 'https://raw.githubusercontent.com/gbzret4d/steam-dev-filter/main/database.json'; // TODO: Replace USERNAME with actual owner
+    const DB_URL = 'https://raw.githubusercontent.com/gbzret4d/steam-dev-filter/main/database.json';
     const CACHE_KEY = 'steam_dev_filter_db_v5';
     const CACHE_TIME = 24 * 60 * 60 * 1000; // 24 hours
     const SETTINGS_KEY = 'steam_dev_filter_settings';
