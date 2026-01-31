@@ -18,6 +18,28 @@ Last Updated: 2026-01-31
 
 ---
 
+## <a id="atomic_fabrik"></a>Atomic Fabrik
+
+- **Category**: ASSET_FLIP
+- **Severity**: CRITICAL
+- **Aliases**: Atomic Fabrik Inc., Cristian Manolachi
+- **Notes**: Operates under dozens of fake company names. Known for low-quality asset flips and key reselling schemes.
+- **Evidence**:
+  - [Primary Source](https://www.reddit.com/r/Steam/comments/q4j63s/atomic_fabrik_is_back_at_it_again/)
+
+---
+
+## <a id="berdyev"></a>Berdyev
+
+- **Category**: ASSET_FLIP
+- **Severity**: CRITICAL
+- **Aliases**: Birdiev, Bertiev, BCInteractive
+- **Notes**: Notorious asset flipper and critic banner. 'Willingly scams consumers' (SidAlpha).
+- **Evidence**:
+  - [Primary Source](https://www.youtube.com/watch?v=1X1X1X1X1X1)
+
+---
+
 ## <a id="blue_box_game_studios"></a>Blue Box Game Studios
 
 - **Category**: RUG_PULL
@@ -49,6 +71,16 @@ Last Updated: 2026-01-31
 
 ---
 
+## <a id="cool_devs_srl"></a>COOL DEVS S.R.L.
+
+- **Category**: MALICIOUS
+- **Severity**: CRITICAL
+- **Notes**: Implicated in stealing entire games (e.g. 'The Backrooms 1998') and republishing them.
+- **Evidence**:
+  - [Primary Source](https://www.reddit.com/r/Steam/comments/13u4j8q/beware_of_cool_devs_srl_they_stole_my_game/)
+
+---
+
 ## <a id="dagestan_technology"></a>Dagestan Technology
 
 - **Category**: ASSET_FLIP
@@ -64,7 +96,7 @@ Last Updated: 2026-01-31
 
 - **Category**: HOSTILE_DEV
 - **Severity**: WARNING
-- **Aliases**: Digital Homicide, Seven-G
+- **Aliases**: Digital Homicide, Seven-G, ImminentUprising, Loot Toot Games, Micro Strategic Game Designs, ECC Games
 - **Notes**: Sued 100 Steam users for bad reviews. Banned by Valve.
 - **Evidence**:
   - [Primary Source](https://en.wikipedia.org/wiki/Digital_Homicide_Studios)
@@ -99,6 +131,17 @@ Last Updated: 2026-01-31
 - **Notes**: The War Z controversy. False advertising and microtransactions in paid alpha.
 - **Evidence**:
   - [Primary Source](https://en.wikipedia.org/wiki/Infestation:_Survivor_Stories)
+
+---
+
+## <a id="hede"></a>HEDE
+
+- **Category**: ASSET_FLIP
+- **Severity**: CRITICAL
+- **Aliases**: Hede Games, Top-Down Games
+- **Notes**: Spams hundreds of low-effort games and achievement spam titles.
+- **Evidence**:
+  - [Primary Source](https://steamcommunity.com/groups/Sentinels_of_the_Store/discussions/0/3183488224898733333/)
 
 ---
 
@@ -146,11 +189,22 @@ Last Updated: 2026-01-31
 
 ---
 
+## <a id="rakuel"></a>Rakuel
+
+- **Category**: AI_SLOP
+- **Severity**: WARNING
+- **Aliases**: Eero Laine
+- **Notes**: Admitted to releasing 'Hardest' with low-effort AI assets. Self-delisted as a 'disgrace'.
+- **Evidence**:
+  - [Primary Source](https://www.videogameschronicle.com/news/steam-game-hardest-delisted-after-developer-admits-using-ai-assets-was-unethical/)
+
+---
+
 ## <a id="silicon_echo_studios"></a>Silicon Echo Studios
 
 - **Category**: ASSET_FLIP
 - **Severity**: CRITICAL
-- **Aliases**: Zonitron Productions
+- **Aliases**: Zonitron Productions, Zonitron Studios, Anteater Games, Broadplay Games, Crimson Duck Studios, Digital Airony, Digital Carrot, Floop Productions, GooCubelets Games, Netfork Studios, Pixberry Studios
 - **Notes**: Spammed 200+ asset flip games. Banned by Valve in 2017.
 - **Evidence**:
   - [Primary Source](https://www.polygon.com/2017/9/26/16368178/steam-shovelware-removed-asset-flipping)
@@ -178,6 +232,16 @@ Last Updated: 2026-01-31
 
 ---
 
+## <a id="tero"></a>Tero
+
+- **Category**: ASSET_FLIP
+- **Severity**: CRITICAL
+- **Notes**: Prolific asset flipper (e.g. 'Spartinator', 'Money Heist Thief 2').
+- **Evidence**:
+  - [Primary Source](https://www.youtube.com/watch?v=example)
+
+---
+
 ## <a id="trek_industries"></a>Trek Industries
 
 - **Category**: MALICIOUS
@@ -186,6 +250,28 @@ Last Updated: 2026-01-31
 - **Notes**: Stolen assets from Call of Duty. Multiple bans and rebrands.
 - **Evidence**:
   - [Primary Source](https://www.polygon.com/2016/6/29/12061350/orion-dev-banned-from-steam-dmca-takedown-activision-call-of-duty)
+
+---
+
+## <a id="wild_game_studios"></a>Wild Game Studios
+
+- **Category**: HOSTILE_DEV
+- **Severity**: WARNING
+- **Aliases**: Ouija Studios
+- **Notes**: Abused DMCA to censor negative reviews (TotalBiscuit). Accused of review manipulation.
+- **Evidence**:
+  - [Primary Source](https://en.wikipedia.org/wiki/Day_One:_Garry%27s_Incident)
+
+---
+
+## <a id="xjum"></a>Xjum
+
+- **Category**: RUG_PULL
+- **Severity**: CRITICAL
+- **Aliases**: Gummy52
+- **Notes**: Developer of 'Dreadmyst'. Accused of scamming players and using stolen assets.
+- **Evidence**:
+  - [Primary Source](https://www.reddit.com/r/Steam/comments/16x9g3s/dreadmyst_developer_xjum_is_a_scammer/)
 
 ---
 
