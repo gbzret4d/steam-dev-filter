@@ -1,13 +1,14 @@
 // ==UserScript==
 // @name         Steam Dev Filter
 // @namespace    https://github.com/gbzret4d/steam-dev-filter
-// @version      1.5
+// @version      1.6
 // @description  Warns about fraudulent Steam developers (Rug pulls, Asset Flips, etc.) based on a community database.
 // @author       Steam Dev Filter Community
 // @match        https://store.steampowered.com/*
 // @grant        GM_xmlhttpRequest
 // @grant        GM_setValue
 // @grant        GM_getValue
+// @grant        GM_registerMenuCommand
 // @downloadURL  https://raw.githubusercontent.com/gbzret4d/steam-dev-filter/main/steam_dev_filter.user.js
 // @updateURL    https://raw.githubusercontent.com/gbzret4d/steam-dev-filter/main/steam_dev_filter.user.js
 // @connect      raw.githubusercontent.com
@@ -30,11 +31,32 @@
     const DB_URL = 'https://raw.githubusercontent.com/gbzret4d/steam-dev-filter/main/database.json'; // TODO: Replace USERNAME with actual owner
     const CACHE_KEY = 'steam_dev_filter_db_v2';
     const CACHE_TIME = 24 * 60 * 60 * 1000; // 24 hours
+    const SETTINGS_KEY = 'steam_dev_filter_settings';
+
+    // Default Settings
+    const DEFAULT_SETTINGS = {
+        langOverride: 'auto', // 'auto', 'en', 'de', ...
+        disabledCategories: [] // Array of disabled types, e.g. ['ABANDONWARE']
+    };
+
+    function getSettings() {
+        const stored = GM_getValue(SETTINGS_KEY);
+        return { ...DEFAULT_SETTINGS, ...stored };
+    }
+
+    function saveSettings(settings) {
+        GM_setValue(SETTINGS_KEY, settings);
+    }
+
+    const currentSettings = getSettings();
 
     // --- Localization ---
     // --- Localization ---
     // Helper to detect language
     function getLang() {
+        if (currentSettings.langOverride !== 'auto') {
+            return currentSettings.langOverride;
+        }
         const navLang = navigator.language.slice(0, 2).toLowerCase();
         const supported = ['de', 'en', 'fr', 'es', 'ru', 'zh', 'it', 'pt', 'pl', 'tr', 'ja', 'ko'];
         return supported.includes(navLang) ? navLang : 'en';
@@ -200,6 +222,31 @@
 
         /* Icon styling */
         .sw-icon { margin-right: 4px; }
+
+        /* Settings Modal */
+        .sw-modal-overlay {
+            position: fixed; top: 0; left: 0; width: 100%; height: 100%;
+            background: rgba(0,0,0,0.7); z-index: 9999;
+            display: flex; justify-content: center; align-items: center;
+        }
+        .sw-modal {
+            background: #1b2838; color: #c6d4df; padding: 20px;
+            border-radius: 4px; border: 1px solid #4b6680;
+            width: 500px; max-width: 90%; font-family: "Motiva Sans", Sans-serif;
+            box-shadow: 0 0 20px rgba(0,0,0,0.8);
+        }
+        .sw-modal h2 { margin-top: 0; border-bottom: 1px solid #4b6680; padding-bottom: 10px; }
+        .sw-setting-row { margin-bottom: 15px; }
+        .sw-setting-label { display: block; font-weight: bold; margin-bottom: 5px; }
+        .sw-btn {
+            background: #2a475e; color: #fff; border: none; padding: 8px 12px;
+            cursor: pointer; border-radius: 2px; margin-right: 10px;
+        }
+        .sw-btn:hover { background: #67c1f5; }
+        .sw-btn.save { background: #66c0f4; color: #fff; }
+        .sw-checkbox-group label { display: block; margin-bottom: 5px; cursor: pointer; }
+        .sw-textarea { width: 100%; height: 100px; background: #000; color: #fff; border: 1px solid #4b6680; }
+        .sw-close { float: right; cursor: pointer; font-size: 20px; }
     `;
 
     // --- Icons & Config ---
@@ -275,6 +322,7 @@
 
     function createBadge(entry, id) {
         if (!entry) return null;
+        if (currentSettings.disabledCategories.includes(entry.type)) return null;
 
         const catConfig = CATEGORIES[entry.type] || { icon: "⚠️", severity: "info" };
         const labelText = I18N[LANG][entry.type] || entry.type;
@@ -408,6 +456,109 @@
         });
 
         observer.observe(document.body, { childList: true, subtree: true });
+
+        // Add Settings Menu Link (e.g. into the global header or footer if possible, or just floating)
+        if (typeof GM_registerMenuCommand !== 'undefined') {
+            GM_registerMenuCommand("Steam Dev Filter Settings", openSettingsModal);
+        }
+    }
+
+    // --- Settings UI ---
+    function openSettingsModal() {
+        if (document.getElementById('sw-settings-modal')) return;
+
+        const overlay = document.createElement('div');
+        overlay.id = 'sw-settings-modal';
+        overlay.className = 'sw-modal-overlay';
+
+        const modal = document.createElement('div');
+        modal.className = 'sw-modal';
+
+        let categoriesHtml = '';
+        for (const type of Object.keys(CATEGORIES)) {
+            const checked = !currentSettings.disabledCategories.includes(type) ? 'checked' : '';
+            categoriesHtml += `<label><input type="checkbox" data-type="${type}" ${checked}> Show ${I18N[LANG][type] || type}</label>`;
+        }
+
+        const languages = ['auto', 'de', 'en', 'fr', 'es', 'ru', 'zh', 'it', 'pt', 'pl', 'tr', 'ja', 'ko'];
+        const langOptions = languages.map(l => `<option value="${l}" ${currentSettings.langOverride === l ? 'selected' : ''}>${l === 'auto' ? 'Auto-Detect' : l.toUpperCase()}</option>`).join('');
+
+        modal.innerHTML = `
+            <span class="sw-close">&times;</span>
+            <h2>Steam Dev Filter Settings</h2>
+            
+            <div class="sw-setting-row">
+                <span class="sw-setting-label">Language</span>
+                <select id="sw-lang-select">${langOptions}</select>
+            </div>
+
+            <div class="sw-setting-row">
+                <span class="sw-setting-label">Enabled Warnings</span>
+                <div class="sw-checkbox-group" id="sw-cat-group">
+                    ${categoriesHtml}
+                </div>
+            </div>
+
+            <div class="sw-setting-row">
+                <span class="sw-setting-label">Export / Import (JSON)</span>
+                <textarea id="sw-export-area" class="sw-textarea" placeholder="Paste settings JSON here to import..."></textarea>
+                <div style="margin-top: 5px;">
+                    <button class="sw-btn" id="sw-export-btn">Export Current</button>
+                    <button class="sw-btn" id="sw-import-btn">Import</button>
+                </div>
+            </div>
+
+            <div style="text-align: right; margin-top: 20px;">
+                <button class="sw-btn save" id="sw-save-btn">Save & Reload</button>
+            </div>
+        `;
+
+        overlay.appendChild(modal);
+        document.body.appendChild(overlay);
+
+        // Event Listeners
+        overlay.querySelector('.sw-close').onclick = () => overlay.remove();
+
+        overlay.querySelector('#sw-save-btn').onclick = () => {
+            const lang = document.getElementById('sw-lang-select').value;
+            const unchecked = Array.from(document.querySelectorAll('#sw-cat-group input:not(:checked)')).map(el => el.getAttribute('data-type'));
+
+            saveSettings({
+                langOverride: lang,
+                disabledCategories: unchecked
+            });
+            window.location.reload();
+        };
+
+        overlay.querySelector('#sw-export-btn').onclick = () => {
+            // Export both Settings and maybe custom database overrides in future?
+            // For now just settings
+            const data = {
+                settings: getSettings(),
+                timestamp: Date.now()
+            };
+            document.getElementById('sw-export-area').value = JSON.stringify(data, null, 2);
+        };
+
+        overlay.querySelector('#sw-import-btn').onclick = () => {
+            try {
+                const json = JSON.parse(document.getElementById('sw-export-area').value);
+                if (json.settings) {
+                    saveSettings(json.settings);
+                    alert("Settings imported successfully! Reloading...");
+                    window.location.reload();
+                } else {
+                    alert("Invalid JSON format.");
+                }
+            } catch (e) {
+                alert("Error parsing JSON.");
+            }
+        };
+
+        // Close on click outside
+        overlay.onclick = (e) => {
+            if (e.target === overlay) overlay.remove();
+        };
     }
 
     main();
