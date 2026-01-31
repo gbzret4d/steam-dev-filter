@@ -121,7 +121,7 @@ Last Updated: 2026-01-31
 - **Aliases**: Birdiev, Bertiev, BCInteractive
 - **Notes**: Notorious asset flipper and critic banner. 'Willingly scams consumers' (SidAlpha).
 - **Evidence**:
-  - [Primary Source](https://www.youtube.com/results?search_query=SidAlpha+Dirty+Devs+I%27m+Looking+for+3024+People)
+  - [Primary Source](https://www.youtube.com/watch?v=y-R2L306uXk)
 
 ---
 
